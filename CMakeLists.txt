@@ -5,7 +5,7 @@ add_subdirectory(src)
 add_subdirectory(test)
 
 add_custom_target(ci
-    DEPENDS sample
+    DEPENDS utf8_to_windows31j_cvt_chekcer
 )
 if((CMAKE_BUILD_TYPE STREQUAL "Debug") AND ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU") AND INFERIOR_OSYNCSTREAM_ENABLE_COVERAGE)
     add_dependencies(ci test_coverage)
