@@ -1,4 +1,9 @@
-﻿#include <fstream>
+﻿/*=============================================================================
+  Copyright (C) 2021 yumetodo <yume-wikijp@live.jp>
+  Distributed under the Boost Software License, Version 1.0.
+  (See https://www.boost.org/LICENSE_1_0.txt)
+=============================================================================*/
+#include <fstream>
 #include <iostream>
 #include <utf8_to_windows31j_cvt_checker.hpp>
 bool lint(std::istream& is, const char* path = nullptr) {

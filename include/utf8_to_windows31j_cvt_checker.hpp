@@ -1,3 +1,8 @@
+/*=============================================================================
+  Copyright (C) 2021 yumetodo <yume-wikijp@live.jp>
+  Distributed under the Boost Software License, Version 1.0.
+  (See https://www.boost.org/LICENSE_1_0.txt)
+=============================================================================*/
 #ifndef UTF8_TO_WINDOWS31J_CVT_CHECKER_HPP_
 #define UTF8_TO_WINDOWS31J_CVT_CHECKER_HPP_
 
