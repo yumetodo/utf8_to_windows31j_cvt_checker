@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 #include <fstream>
-#include <utf8_to_windows31j_cvt_chekcer.hpp>
+#include <utf8_to_windows31j_cvt_checker.hpp>
 void lint(std::istream& is)
 {
     iconv_utf8_windows31j_cvt cvt;

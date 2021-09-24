@@ -1,7 +1,7 @@
 ﻿#ifndef IUTEST_USE_MAIN
 #define IUTEST_USE_MAIN
 #endif
-#include <utf8_to_windows31j_cvt_chekcer.hpp>
+#include <utf8_to_windows31j_cvt_checker.hpp>
 #include <iutest.hpp>
 IUTEST(Basic, sucess)
 {

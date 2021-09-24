@@ -12,13 +12,13 @@ set(CMAKE_CXX_EXTENSIONS OFF) #...without compiler extensions like gnu++11
 #
 # Set our project name
 #
-project(utf8_to_windows31j_cvt_chekcer)
+project(utf8_to_windows31j_cvt_checker)
 
 #
 # Source files
 #
-set(utf8_to_windows31j_cvt_chekcer_src
-    "./utf8_to_windows31j_cvt_chekcer.cpp"
+set(utf8_to_windows31j_cvt_checker_src
+    "./utf8_to_windows31j_cvt_checker.cpp"
 )
 
 #
@@ -46,6 +46,6 @@ endif()
 #
 # Compile
 #
-add_executable(utf8_to_windows31j_cvt_chekcer ${utf8_to_windows31j_cvt_chekcer_src})
-target_include_directories(utf8_to_windows31j_cvt_chekcer PRIVATE "../include")
-target_link_libraries(utf8_to_windows31j_cvt_chekcer PRIVATE Iconv::Iconv)
+add_executable(utf8_to_windows31j_cvt_checker ${utf8_to_windows31j_cvt_checker_src})
+target_include_directories(utf8_to_windows31j_cvt_checker PRIVATE "../include")
+target_link_libraries(utf8_to_windows31j_cvt_checker PRIVATE Iconv::Iconv)
