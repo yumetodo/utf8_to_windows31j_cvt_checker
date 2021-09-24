@@ -4,6 +4,7 @@
 #include <iconv.h>
 
 #include <cerrno>
+#include <iostream>
 #include <stdexcept>
 #include <string>
 #include <utility>
