@@ -15,7 +15,7 @@ iconv: illegal input sequence at position 3
 ## Usage
 
 ```
-utf8_to_windows31j_cvt_checker <some file>
+utf8_to_windows31j_cvt_checker <some files>
 cat <some file> | utf8_to_windows31j_cvt_checker
 ```
 
