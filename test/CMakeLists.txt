@@ -31,6 +31,13 @@ set(basic_test_src
     "./test.cpp"
 )
 
+#
+# find libraries and include
+#
+
+# find thread library
+find_package(Iconv REQUIRED)
+
 if(INFERIOR_OSYNCSTREAM_ENABLE_COVERAGE)
     message("coverage enabled")
     include(CodeCoverage)
@@ -73,12 +80,15 @@ endif()
 #
 add_executable(basic_test ${basic_test_src})
 target_include_directories(basic_test PRIVATE "../include" "../iutest/include")
+target_link_libraries(basic_test PRIVATE Iconv::Iconv)
 
 #
 # Link
 #
 if(WIN32)
-    target_link_libraries(basic_test ws2_32)
+    target_link_libraries(basic_test PRIVATE Iconv::Iconv ws2_32)
+else()
+    target_link_libraries(basic_test PRIVATE Iconv::Iconv)
 endif()
 
 add_custom_target(run_test
