@@ -43,3 +43,9 @@ iutestを利用しています
 cmake -B build .
 cmake --build build --target ci
 ```
+
+## docker
+
+[Docker Hub yumetodo/utf8_to_windows31j_cvt_checker](https://hub.docker.com/repository/docker/yumetodo/utf8_to_windows31j_cvt_checker/general)
+
+にimageおいています。
