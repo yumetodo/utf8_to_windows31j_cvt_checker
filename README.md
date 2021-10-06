@@ -35,6 +35,14 @@ cmake -B build .
 cmake --build build --target utf8_to_windows31j_cvt_checker
 ```
 
+## install
+
+You can use `cmake --install`. By using `--prefix`, you can control where you want to install to.
+
+```
+sudo cmake --install build --prefix /usr
+```
+
 ## test
 
 iutestを利用しています

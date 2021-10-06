@@ -49,3 +49,5 @@ endif()
 add_executable(utf8_to_windows31j_cvt_checker ${utf8_to_windows31j_cvt_checker_src})
 target_include_directories(utf8_to_windows31j_cvt_checker PRIVATE "../include")
 target_link_libraries(utf8_to_windows31j_cvt_checker PRIVATE Iconv::Iconv)
+
+install(TARGETS utf8_to_windows31j_cvt_checker RUNTIME DESTINATION "bin")
