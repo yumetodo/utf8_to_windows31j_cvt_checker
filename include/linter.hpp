@@ -38,12 +38,13 @@ inline bool lint(std::istream& is, std::ostream& os, const char* path = nullptr)
         } catch (const std::runtime_error& er) {
             if (!std::exchange(has_error, true)) {
                 os << ascii_color::bright_red << "invalid input(s) has detected. see blow:\n";
-                if (path) {
-                    os << ascii_color::reset << "In file " << path << '\n';
-                }
             }
-            os << ascii_color::bright_cyan << "line " << line << ascii_color::reset << '\n'
-               << buf << std::endl;
+            if (path) {
+                os << ascii_color::bright_cyan << path << ':';
+            } else {
+                os << ascii_color::bright_cyan << "line ";
+            }
+            os << line << ascii_color::reset << '\n' << buf << std::endl;
         }
     }
     return !has_error;
