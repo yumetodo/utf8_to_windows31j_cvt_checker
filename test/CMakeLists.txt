@@ -28,7 +28,8 @@ project(basic_test)
 # Source files
 #
 set(basic_test_src
-    "./test.cpp"
+    "./utf8_to_windows31j_cvt_checker_test.cpp"
+    "./linter_test.cpp"
 )
 
 #

@@ -3,8 +3,8 @@
   Distributed under the Boost Software License, Version 1.0.
   (See https://www.boost.org/LICENSE_1_0.txt)
 =============================================================================*/
-#ifndef UTF8_TO_WINDOWS31J_CVT_CHECKER_HPP_
-#define UTF8_TO_WINDOWS31J_CVT_CHECKER_HPP_
+#ifndef UTF8_TO_WINDOWS31J_CVT_CHECKER_UTF8_TO_WINDOWS31J_CVT_CHECKER_HPP_
+#define UTF8_TO_WINDOWS31J_CVT_CHECKER_UTF8_TO_WINDOWS31J_CVT_CHECKER_HPP_
 
 #include <iconv.h>
 
@@ -13,28 +13,6 @@
 #include <stdexcept>
 #include <string>
 #include <utility>
-enum class ascii_color : int {
-    reset = 0,
-    black = 30,
-    red = 31,
-    green = 32,
-    yellow = 33,
-    blue = 34,
-    magenta = 35,
-    cyan = 36,
-    white = 37,
-    bright_black = 90,
-    bright_red = 91,
-    bright_green = 92,
-    bright_yellow = 93,
-    bright_blue = 94,
-    bright_magenta = 95,
-    bright_cyan = 96,
-    bright_white = 97,
-};
-inline std::ostream& operator<<(std::ostream& os, ascii_color c) {
-    return os << "\033[" << static_cast<int>(c) << 'm';
-}
 class iconv_utf8_windows31j_cvt {
 public:
     iconv_utf8_windows31j_cvt() {
@@ -92,4 +70,4 @@ private:
     }
     iconv_t cd;
 };
-#endif  // UTF8_TO_WINDOWS31J_CVT_CHECKER_HPP_
+#endif  // UTF8_TO_WINDOWS31J_CVT_CHECKER_UTF8_TO_WINDOWS31J_CVT_CHECKER_HPP_

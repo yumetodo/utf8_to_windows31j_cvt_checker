@@ -8,13 +8,13 @@
 #endif
 #include <iutest.hpp>
 #include <utf8_to_windows31j_cvt_checker.hpp>
-IUTEST(Basic, sucess) {
+IUTEST(Cvt, success) {
     const char* ascii = "arikitari na sekai";
     iconv_utf8_windows31j_cvt cvt;
     IUTEST_ASSERT_EQ(ascii, cvt(ascii));
     IUTEST_ASSERT_NO_THROW(cvt(reinterpret_cast<const char*>(u8"インストールされていません")));
 }
-IUTEST(Basic, fail) {
+IUTEST(Cvt, fail) {
     iconv_utf8_windows31j_cvt cvt;
     IUTEST_ASSERT_THROW(
         cvt(reinterpret_cast<const char*>(u8"アプリケーション")), std::runtime_error);
