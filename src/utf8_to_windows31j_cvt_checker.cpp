@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
     int ret = 0;
     for (int i = 1; i < argc; i++) {
         std::ifstream ifs(argv[i]);
-        if (lint(ifs, argv[i])) ret = 1;
+        if (!lint(ifs, argv[i])) ret = 1;
     }
     return ret;
 }
