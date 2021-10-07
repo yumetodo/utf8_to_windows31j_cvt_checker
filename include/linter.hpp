@@ -46,7 +46,7 @@ inline bool lint(std::istream& is, std::ostream& os, const char* path = nullptr)
                << buf << std::endl;
         }
     }
-    return true;
+    return !has_error;
 }
 inline bool lint(std::istream& is, const char* path = nullptr) { return lint(is, std::cerr, path); }
 #endif  // UTF8_TO_WINDOWS31J_CVT_CHECKER_LINTER_HPP_
