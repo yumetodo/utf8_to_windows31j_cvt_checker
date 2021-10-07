@@ -9,6 +9,17 @@ jobs:
           submodules: true
       - run: cmake -B build .
       - run: cmake --build build --target ci
+      - name: "test: success"
+        run: build/src/utf8_to_windows31j_cvt_checker test/inputs/success1.txt
+      - name: "test: fail"
+        run: |
+          build/src/utf8_to_windows31j_cvt_checker test/inputs/fail1.txt
+          if [ $? -eq 1]; then
+            echo "pass"
+            exit 0
+          fi
+          echo $?
+          exit 1
       - name: "check ldd"
         run: ldd build/src/utf8_to_windows31j_cvt_checker
       - name: Upload Binary
