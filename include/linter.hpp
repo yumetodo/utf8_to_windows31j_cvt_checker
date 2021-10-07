@@ -30,7 +30,7 @@ inline std::ostream& operator<<(std::ostream& os, ascii_color c) {
 }
 inline bool lint(std::istream& is, std::ostream& os, const char* path = nullptr) {
     iconv_utf8_windows31j_cvt cvt;
-    std::size_t line{};
+    std::size_t line = 1;
     bool has_error = false;
     for (std::string buf; std::getline(is, buf); ++line) {
         try {
