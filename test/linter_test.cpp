@@ -10,11 +10,11 @@ IUTEST(Linter, success) {
     std::stringstream iss;
     iss << reinterpret_cast<const char*>(u8"インストールされていません");
     std::ostringstream oss;
-    IUTEST_ASSERT_EQ(0, lint(iss, oss));
+    IUTEST_ASSERT_EQ(true, lint(iss, oss));
 }
 IUTEST(Linter, fail) {
     std::stringstream iss;
     iss << reinterpret_cast<const char*>(u8"アプリケーション");
     std::ostringstream oss;
-    IUTEST_ASSERT_EQ(1, lint(iss, oss));
+    IUTEST_ASSERT_EQ(false, lint(iss, oss));
 }
