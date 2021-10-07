@@ -17,7 +17,7 @@ jobs:
         run: |
           EXIT_CODE=0
           build/src/utf8_to_windows31j_cvt_checker test/inputs/fail1.txt || EXIT_CODE=$?
-          if [ $EXIT_CODE -eq 1]; then
+          if [ $EXIT_CODE -eq 1 ]; then
             echo "pass"
             exit 0
           fi
@@ -27,7 +27,7 @@ jobs:
         run: |
           EXIT_CODE=0
           build/src/utf8_to_windows31j_cvt_checker < test/inputs/fail1.txt || EXIT_CODE=$?
-          if [ $EXIT_CODE -eq 1]; then
+          if [ $EXIT_CODE -eq 1 ]; then
             echo "pass"
             exit 0
           fi
