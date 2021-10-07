@@ -15,21 +15,23 @@ jobs:
         run: build/src/utf8_to_windows31j_cvt_checker < test/inputs/success1.txt
       - name: "test: fail1"
         run: |
-          build/src/utf8_to_windows31j_cvt_checker test/inputs/fail1.txt
-          if [ $? -eq 1]; then
+          EXIT_CODE=0
+          build/src/utf8_to_windows31j_cvt_checker test/inputs/fail1.txt || EXIT_CODE=$?
+          if [ $EXIT_CODE -eq 1]; then
             echo "pass"
             exit 0
           fi
-          echo $?
+          echo $EXIT_CODE
           exit 1
       - name: "test: fail1 from stdin"
         run: |
-          build/src/utf8_to_windows31j_cvt_checker < test/inputs/fail1.txt
-          if [ $? -eq 1]; then
+          EXIT_CODE=0
+          build/src/utf8_to_windows31j_cvt_checker < test/inputs/fail1.txt || EXIT_CODE=$?
+          if [ $EXIT_CODE -eq 1]; then
             echo "pass"
             exit 0
           fi
-          echo $?
+          echo $EXIT_CODE
           exit 1
       - name: "check ldd"
         run: ldd build/src/utf8_to_windows31j_cvt_checker
